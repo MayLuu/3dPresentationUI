@@ -1,0 +1,103 @@
+<!-- <div>
+  <input
+    class=""
+    type="file"
+    (change)="fileChanged($event)"
+    accept=".png, .obj"
+  />
+  <div class="displaySelectedFile">
+    <div *ngIf="!isObj">
+      <div *ngIf="myImage">
+        <img [src]="myImage" alt="oke" width="60%" class="border-img p-2" />
+      </div>
+    </div>
+    <div *ngIf="isObj"></div>
+  </div>
+
+  <button *ngIf="isObj">Analy</button>
+  <button *ngIf="!isObj">Analy</button>
+</div> -->
+<div class="container">
+  <div class="side_bar">
+    <div class="title_part">
+      <div class="title">3d face presentation</div>
+      <div class="sub_title">Visualize 3D FACE with a click</div>
+    </div>
+
+    <div class="steps_part">
+      <div class="step">
+        <div>
+          <div>Step 1:</div>
+          <div>Upload you images</div>
+        </div>
+        <button
+          id="upload_btn"
+          (click)="handleClick()"
+          mat-raised-button
+          color="primary"
+        >
+          <label for="file">Input image</label>
+          <input
+            id="file"
+            class=""
+            type="file"
+            (change)="fileChanged($event)"
+            accept=".png, .obj"
+            hidden
+          />
+        </button>
+      </div>
+      <div class="step">
+        <div>
+          <div>Step 2:</div>
+          <div>Run model</div>
+        </div>
+        <button mat-raised-button color="primary">Model</button>
+      </div>
+      <div class="step">
+        <div>
+          <div>Step 3:</div>
+          <div>Upload ground-truth</div>
+        </div>
+        <button mat-raised-button color="primary">Ground-truth</button>
+      </div>
+      <div class="step">
+        <div>
+          <div>Step 4:</div>
+          <div>Calculate loss</div>
+        </div>
+        <button mat-raised-button color="primary">Loss</button>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="col">
+      <div class="content_title">
+        <div class="icon"><mat-icon>photo</mat-icon></div>
+        <div class="title">Input</div>
+      </div>
+      <div class="content_body">
+        <div class="displaySelectedFile">
+          <div *ngIf="!isObj">
+            <div *ngIf="myImage" class="img_container">
+              <img [src]="myImage" alt="image" class="upload_img" />
+            </div>
+          </div>
+          <div *ngIf="isObj"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="content_title">
+        <div class="icon"><mat-icon>memory</mat-icon></div>
+        <div class="title">Prediction</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="content_title">
+        <div class="icon"><mat-icon>perm_data_setting</mat-icon></div>
+        <div class="title">Ground-truth</div>
+      </div>
+    </div>
+  </div>
+</div>

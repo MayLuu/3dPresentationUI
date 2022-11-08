@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+
+canvas {
+  position: absolute !important;
+  top: 10px !important
+}
+
+.side_bar {
+  background-color: rgba(174, 178, 184, 0.229);
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 2% 1%;
+
+  .title_part {
+    height: 20%;
+    margin-bottom: 2rem;
+
+    .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2.2rem;
+      line-height: 3rem;
+      border: none;
+      border-bottom: 1px solid grey;
+
+    }
+
+    .sub_title {
+      color: darkgray;
+      font-size: 1.1rem;
+      line-height: 2.3rem;
+    }
+  }
+
+  .steps_part {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 2rem;
+    justify-content: baseline;
+
+
+    .step {
+      display: flex;
+      flex-direction: row;
+
+      div {
+        :nth-child(1) {
+          font-size: 0.8rem;
+          letter-spacing: 0.1rem;
+          color: dimgray;
+          text-transform: uppercase;
+        }
+
+        letter-spacing: 0.06rem;
+        width: 80%;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+
+      button {
+        margin: 0.6rem 0;
+        width: 30%;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2%;
+
+  .col:nth-child(3) {
+    border: none;
+  }
+
+  .col {
+    width: 32%;
+    height: 70vh;
+    border-right: 0.05rem solid rgba(0, 0, 0, 0.118);
+
+
+    .content_title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      line-height: 2rem;
+      border: none;
+      // border-bottom: solid 1.5px black;
+
+      mat-icon {
+        padding: 50% 0;
+      }
+
+      .title {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+        font-weight: bolder;
+        color: rgb(40, 40, 39);
+        text-shadow: 0.3rem 0.2rem 0.4rem #8888888f;
+      }
+    }
+
+    .content_body {
+      width: 100%;
+      height: max-content;
+
+
+
+
+    }
+  }
+}
+
+.img_container {
+  display: flex;
+  justify-content: center;
+
+  .upload_img {
+    width: 95%;
+    padding: 0.3rem;
+    // border: 1px dashed darkblue;
+    // border-radius: 0.3rem;
+    margin: 0 auto;
+  }
+}
